@@ -170,13 +170,12 @@
 - (UIButton *)popBTN{
     if (!_popBTN) {
         UIButton * customView = [UIButton buttonWithType:UIButtonTypeSystem];
-        [customView setBackgroundImage:[UIImage imageNamed:@"infogather_boy"] forState:UIControlStateNormal];
+        [customView setBackgroundImage:[UIImage imageNamed:@"infogather_girl"] forState:UIControlStateNormal];
         [customView addTarget:self action:@selector(magnifyingPush) forControlEvents:UIControlEventTouchUpInside];
         customView.frame = CGRectMake(15, 0, 40, 40);
         _popBTN = customView;
         UIBarButtonItem * left = [[UIBarButtonItem alloc] initWithCustomView:customView];
         self.navigationItem.leftBarButtonItem = left;
-//        [self.navigationController.navigationBar addSubview:_popBTN];
     }
     return _popBTN;
 }

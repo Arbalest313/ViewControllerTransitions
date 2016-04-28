@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addGestureToView];
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.edgesForExtendedLayout = YES;
+    self.extendedLayoutIncludesOpaqueBars = YES;
 
     // Do any additional setup after loading the view.
 }
@@ -25,9 +28,6 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.navigationController.delegate = self;
-    self.automaticallyAdjustsScrollViewInsets = YES;
-    self.edgesForExtendedLayout = YES;
-    self.extendedLayoutIncludesOpaqueBars = YES;
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
 }
 
@@ -95,7 +95,7 @@
     }
     else if (recognizer.state == UIGestureRecognizerStateEnded || recognizer.state == UIGestureRecognizerStateCancelled) {
         // Finish or cancel the interactive transition
-        if (progress > 0.5) {
+        if (progress > 0.35) {
             [self.interactivePopTransition finishInteractiveTransition];
         }
         else {
