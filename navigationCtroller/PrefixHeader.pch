@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  navigationCtroller
+//
+//  Created by huangyuan on 4/4/16.
+//  Copyright © 2016 com.ushopal. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import "Macros.h"
+#import "navigationCtroller-Swift.h"
+
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
